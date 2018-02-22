@@ -24,7 +24,7 @@ Usage:
    - services.AddSimpleLocalization<SharedResources>();
    - services.AddMvc().AddSimpleLocalizationForDataAnnotations<SharedResources>();
 
-5) You are now able to use localization in
+5) You are now able to use localization in:
    - C# classes (controllers, models, etc.)
    - Views (.cshtml files)
    - DataAnotations (i.e. [Required(ErrorMessage = "MyErrorMessage"])
