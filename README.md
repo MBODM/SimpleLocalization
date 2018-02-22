@@ -27,19 +27,30 @@ Usage:
 5) You are now able to use localization in:
    - C# classes (controllers, models, etc.)
    - Views (.cshtml files)
-   - DataAnotations (i.e. "[Required(ErrorMessage = "MyErrorMessage"]")
+   - DataAnotations (i.e. "[Required(ErrorMessage = "MyErrorText"]")
 
-Controller:
-
+Used in Controller:
 - Inject "ILocalizer<SharedRessources>" into your controller. We name the variable "localizer".
-- With "localizer["MessageText"]" or "localizer.GetText("MessageText")" you can use it.
-- The string "MessageText" is the name of a field you want to have in your ".resx" files.
-- If there is no such field, the key value returns: "MessageText". That is ASP.NET Core behaviour.
+- With "localizer["MyMessageText"]" or "localizer.GetText("MyMessageText")" you can use it.
+- The string "MyMessageText" is the name of a field you want to have in your ".resx" files.
+- If there is no such field, the key value returns: "MyMessageText". This is ASP.NET Core behaviour.
 
-8) You can change the culture and all text changes:
+Used in View:
+- Add "@using MBODM.AspNetCore.SimpleLocalization" to your view.
+- Add "@inject ILocalizer Localizer" to your view.
+- You can use it per "<h1>@Localizer["MyMessageText"]</h1>".
 
-  var cultureInfo = new CultureInfo("en-US");
-  CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
-  CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+Used in DataAnotations:
+- You do not have to do anything.
+- Just use i.e. "[Required(ErrorMessage = "MyErrorText"]".
+- The string "MyErrorText" is the name of a field you want to have in your ".resx" files.
+- ErrorMessage will now contain the value of that field.
+- If there is no such field, ErrorMessage will contain the key value: "MyErrorText". This is ASP.NET Core behaviour.
 
-9)
+Change culture:
+- You can change the culture and all text changes, with the following 3 lines of code:
+- var cultureInfo = new CultureInfo("en-US");
+- CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+- CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
+That´s it. Have fun!
