@@ -3,7 +3,7 @@ A simple middleware for ASP.NET Core 2.x that abstracts localization and make th
 
 The "how and why":
 
-In ASP.NET Core 2.x you can use localization in a simple way, mostly known as "Shared Resources". This middleware use that approach, offer an easy setup and abstracts the ASP.NET Core stuff away from the application.
+In ASP.NET Core 2.x we are able to use localization in a simple way, mostly known as "Shared Resources". This middleware use that approach, offer an easy setup and abstracts the ASP.NET Core stuff away from the application.
 
 The reason why it abstracts stuff away, is to keep things simple in the future. Since softwares are changed a lot in short intervals these days, maybe they change the concepts of ASP.NET Core some day, like they did with 1.1 to 2.0. A simple stuff like localization is easy to decouple and that seems to be a better way to handle a cross cutting like localization.
 
