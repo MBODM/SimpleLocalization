@@ -32,8 +32,8 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 ### Used in Controller:
 - Inject `ILocalizer<SharedRessources>` into your controller. We name the variable `localizer`.
 - With `localizer["MessageText1"]` or `localizer.GetText("MessageText1")` you can use it.
-- The string "MessageText1" is the name of a field you want to have in your ".resx" files.
-- If there is no such field, the key value returns: "MessageText1". This is ASP.NET Core behaviour.
+- The string *"MessageText1"* is the name of a field you want to have in your *".resx"* files.
+- If there is no such field, the key value returns: *"MessageText1"*. This is ASP.NET Core behaviour.
 
 ### Used in View:
 - Add `@using MBODM.AspNetCore.SimpleLocalization` to your view.
@@ -43,9 +43,9 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 ### Used in DataAnnotations:
 - You do not have to do anything.
 - Just use i.e. `[Required(ErrorMessage = "ErrorText5"]`.
-- The string "ErrorText5" is the name of a field you want to have in your ".resx" files.
+- The string *"ErrorText5"* is the name of a field you want to have in your *".resx"* files.
 - ErrorMessage will now contain the value of that field.
-- If there is no such field, ErrorMessage will contain the key value: "ErrorText5". This is ASP.NET Core behaviour.
+- If there is no such field, ErrorMessage will contain the key value: *"ErrorText5"*. This is ASP.NET Core behaviour.
 
 ### Change culture:
 - You can change the culture, so all text changes, with the following 3 lines of code:
