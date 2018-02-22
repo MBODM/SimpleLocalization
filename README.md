@@ -38,7 +38,7 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 ### Used in View:
 - Add `@using MBODM.AspNetCore.SimpleLocalization` to your view.
 - Add `@inject ILocalizer Localizer` to your view.
-- You can use it per `<h1>@Localizer["MessageText1"]</h1>`.
+- You can use it via `<h1>@Localizer["MessageText1"]</h1>`.
 
 ### Used in DataAnnotations:
 - You do not have to do anything.
