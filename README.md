@@ -27,25 +27,25 @@ Usage:
 5) You are now able to use localization in:
    - C# classes (controllers, models, etc.)
    - Views (.cshtml files)
-   - DataAnotations (i.e. `[Required(ErrorMessage = "MyErrorText"]`)
+   - DataAnotations (i.e. `[Required(ErrorMessage = "ErrorText5"]`)
 
 Used in Controller:
 - Inject `ILocalizer<SharedRessources>` into your controller. We name the variable `localizer`.
-- With `localizer["MyMessageText"]` or `localizer.GetText("MyMessageText")` you can use it.
-- The string "MyMessageText" is the name of a field you want to have in your ".resx" files.
-- If there is no such field, the key value returns: "MyMessageText". This is ASP.NET Core behaviour.
+- With `localizer["MessageText1"]` or `localizer.GetText("MessageText1")` you can use it.
+- The string "MessageText1" is the name of a field you want to have in your ".resx" files.
+- If there is no such field, the key value returns: "MessageText1". This is ASP.NET Core behaviour.
 
 Used in View:
 - Add `@using MBODM.AspNetCore.SimpleLocalization` to your view.
 - Add `@inject ILocalizer Localizer` to your view.
-- You can use it per `<h1>@Localizer["MyMessageText"]</h1>`.
+- You can use it per `<h1>@Localizer["MessageText1"]</h1>`.
 
 Used in DataAnotations:
 - You do not have to do anything.
-- Just use i.e. `[Required(ErrorMessage = "MyErrorText"]`.
-- The string "MyErrorText" is the name of a field you want to have in your ".resx" files.
+- Just use i.e. `[Required(ErrorMessage = "ErrorText5"]`.
+- The string "ErrorText5" is the name of a field you want to have in your ".resx" files.
 - ErrorMessage will now contain the value of that field.
-- If there is no such field, ErrorMessage will contain the key value: "MyErrorText". This is ASP.NET Core behaviour.
+- If there is no such field, ErrorMessage will contain the key value: "ErrorText5". This is ASP.NET Core behaviour.
 
 Change culture:
 - You can change the culture and all text changes, with the following 3 lines of code:
