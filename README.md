@@ -24,8 +24,8 @@ PS: As i already said above, this is a requirement of the ASP.NET Core localizat
   In that case, we support localization for english and german languages.
 
 4) Add the middleware in the "Startup.cs" of your project:
-   services.AddSimpleLocalization<SharedResources>();
-   services.AddMvc().AddSimpleLocalizationForDataAnnotations<SharedResources>();
+   - services.AddSimpleLocalization<SharedResources>();
+   - services.AddMvc().AddSimpleLocalizationForDataAnnotations<SharedResources>();
 
 5) You are now able to use localization in
    - C# classes (controllers, models, etc.)
