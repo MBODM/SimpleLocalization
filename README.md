@@ -40,7 +40,7 @@ Used in View:
 - Add `@inject ILocalizer Localizer` to your view.
 - You can use it per `<h1>@Localizer["MessageText1"]</h1>`.
 
-Used in DataAnotations:
+Used in DataAnnotations:
 - You do not have to do anything.
 - Just use i.e. `[Required(ErrorMessage = "ErrorText5"]`.
 - The string "ErrorText5" is the name of a field you want to have in your ".resx" files.
