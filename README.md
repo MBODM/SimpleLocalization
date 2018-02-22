@@ -36,9 +36,9 @@ Used in Controller:
 - If there is no such field, the key value returns: "MyMessageText". This is ASP.NET Core behaviour.
 
 Used in View:
-- Add "@using MBODM.AspNetCore.SimpleLocalization" to your view.
-- Add "@inject ILocalizer Localizer" to your view.
-- You can use it per "<h1>@Localizer["MyMessageText"]</h1>".
+- Add `@@using MBODM.AspNetCore.SimpleLocalization` to your view.
+- Add `@@inject ILocalizer Localizer` to your view.
+- You can use it per `<h1>@@Localizer["MyMessageText"]</h1>`.
 
 Used in DataAnotations:
 - You do not have to do anything.
