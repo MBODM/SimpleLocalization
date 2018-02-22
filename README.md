@@ -15,7 +15,7 @@ Usage:
 
 2. Add a folder named "Resources" to your project. Hint: This is the default, but the middleware has also a method overload, allowing you to specify name and path of the folder.
 
-3. Add an empty class to that folder. Also add ".resx" files to that folder. They must have the same name as the class. This is a requirement of ASP.NET Core localization. The name is up to you. As example, we use "SharedResources" as name here, and we add the class and 2 resource files, for english and german languages:
+3. Add an empty class to that folder. Also add ".resx" files to that folder. They must have the same name as the class. This is a requirement of ASP.NET Core localization. The name is up to you. As example, we use "SharedResources" as name here, to add the class and 2 resource files, for english and german languages:
     - SharedResources.cs
     - SharedResources.en.resx
     - SharedResources.de.resx
