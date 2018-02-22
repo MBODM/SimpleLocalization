@@ -17,27 +17,22 @@ PS: As i already said above, this is a requirement of the ASP.NET Core localizat
 As example, we add 2 files named "SharedResources.en.resx" and "SharedResources.de.resx".
 In that case, we support localization for english and german languages.
 
-4)
-Add the middleware in the "Startup.cs" of your project:
+4) Add the middleware in the "Startup.cs" of your project:
 
   services.AddSimpleLocalization<SharedResources>();
   services.AddMvc().AddSimpleLocalizationForDataAnnotations<SharedResources>();
 
-5)
-You are now able to use localization in
+5) You are now able to use localization in
 - C# classes (controllers, models, etc.)
 - Views (.cshtml files)
 - DataAnotations ([Required(ErrorMessage = "MyErrorMessage"])
 
-6)
-Inject "ILocalizer<SharedRessources> localizer" into your controller.
+6) Inject "ILocalizer<SharedRessources> localizer" into your controller.
   
-7)
-With "localizer["MessageText"]" or "localizer.GetText("MessageText")" you can use it.
+7) With "localizer["MessageText"]" or "localizer.GetText("MessageText")" you can use it.
 The string "MessageText" is the name of a field in your ".resx" files.
 
-8)
-You can change the culture and all text changes:
+8) You can change the culture and all text changes:
 
   var cultureInfo = new CultureInfo("en-US");
   CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
