@@ -7,7 +7,7 @@ ASP.NET Core 2.x makes it possible to use localization in a simple way, mostly k
 
 The reason why it abstracts stuff away, is to keep things simple in the future. These days software changes a lot in short intervals. And maybe also Microsoft may change the concepts of ASP.NET Core soon again, like they did with 1.1 to 2.0.
 
-Simple stuff like localization is easy to decouple. And since localization is a cross cutting concern, and therefore used in a lot of code files, it seems better to be dependent on an own abstraction, like an interface, instead being directly dependent on stuff of a framework, that is changed from time to time.
+Simple stuff like localization is easy to decouple. And since localization is a cross cutting concern, and therefore used in a lot of code files, it seems better to be dependent on an own abstraction, like an interface, instead being directly dependent to stuff of a framework, that is changed from time to time.
 
 Usage:
 
