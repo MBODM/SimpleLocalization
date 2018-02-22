@@ -27,9 +27,9 @@ services.AddSimpleLocalization<SharedResources>();
 services.AddMvc().AddSimpleLocalizationForDataAnnotations<SharedResources>();
 
 5) You are now able to use localization in
-- C# classes (controllers, models, etc.)
-- Views (.cshtml files)
-- DataAnotations ([Required(ErrorMessage = "MyErrorMessage"])
+   - C# classes (controllers, models, etc.)
+   - Views (.cshtml files)
+   - DataAnotations ([Required(ErrorMessage = "MyErrorMessage"])
 
 6) Inject "ILocalizer<SharedRessources> localizer" into your controller.
   
