@@ -27,7 +27,7 @@ Usage:
 5) You are now able to use localization in:
    - C# classes (controllers, models, etc.)
    - Views (.cshtml files)
-   - DataAnotations (i.e. [Required(ErrorMessage = "MyErrorMessage"])
+   - DataAnotations (i.e. "[Required(ErrorMessage = "MyErrorMessage"]")
 
 6) Inject "ILocalizer<SharedRessources> localizer" into your controller.
   
