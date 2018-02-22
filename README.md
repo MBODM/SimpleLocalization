@@ -9,7 +9,7 @@ The reason why it abstracts stuff away, is to keep things simple in the future. 
 
 Simple stuff like localization is easy to decouple. And since localization is a cross cutting concern, and therefore used in a lot of code files, it seems better to be dependent on an own abstraction, like an interface, instead being directly dependent on stuff in a framework, that is changed from time to time.
 
-## Usage:
+### Usage:
 
 1. Add NuGet package or src to your ASP.NET Core 2.x project.
 
@@ -29,25 +29,25 @@ Simple stuff like localization is easy to decouple. And since localization is a 
    - Views (.cshtml files)
    - DataAnotations (i.e. `[Required(ErrorMessage = "ErrorText5"]`)
 
-## Used in Controller:
+### Used in Controller:
 - Inject `ILocalizer<SharedRessources>` into your controller. We name the variable `localizer`.
 - With `localizer["MessageText1"]` or `localizer.GetText("MessageText1")` you can use it.
 - The string "MessageText1" is the name of a field you want to have in your ".resx" files.
 - If there is no such field, the key value returns: "MessageText1". This is ASP.NET Core behaviour.
 
-## Used in View:
+### Used in View:
 - Add `@using MBODM.AspNetCore.SimpleLocalization` to your view.
 - Add `@inject ILocalizer Localizer` to your view.
 - You can use it per `<h1>@Localizer["MessageText1"]</h1>`.
 
-## Used in DataAnnotations:
+### Used in DataAnnotations:
 - You do not have to do anything.
 - Just use i.e. `[Required(ErrorMessage = "ErrorText5"]`.
 - The string "ErrorText5" is the name of a field you want to have in your ".resx" files.
 - ErrorMessage will now contain the value of that field.
 - If there is no such field, ErrorMessage will contain the key value: "ErrorText5". This is ASP.NET Core behaviour.
 
-## Change culture:
+### Change culture:
 - You can change the culture, so all text changes, with the following 3 lines of code:
 - `var cultureInfo = new CultureInfo("en-US");`
 - `CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
