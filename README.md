@@ -16,8 +16,8 @@ Usage:
 2. Add a folder named "Resources" to your project. There is also an overloaded method in the middleware, allowing you to specify the name and path of the folder.
 
 3. Add an empty class to that folder. We name the class "SharedResources" here. But that is up to you. Add also ".resx" files to that folder. The files must have the same name as the class we added. As i already said above, this is a requirement of the ASP.NET Core localization concept. As example, we add 2 files:
-- "SharedResources.en.resx"
-- "SharedResources.de.resx"
+  - "SharedResources.en.resx"
+  - "SharedResources.de.resx"
 In that case, we support localization for english and german languages.
 
 4) Add the middleware in the "Startup.cs" of your project:
