@@ -11,9 +11,9 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 
 Usage:
 
-1) Add NuGet package or src to your ASP.NET Core 2.x project.
+- Add NuGet package or src to your ASP.NET Core 2.x project.
 
-2) Add a folder named "Resources" to your project.
+- Add a folder named "Resources" to your project.
 PS: There is also an overloaded method in the middleware, allowing you to specify the name and path of the folder.
 
 3) Add an empty class to that folder. We name the class "SharedResources" here. But that is up to you.
