@@ -48,7 +48,7 @@ Used in DataAnotations:
 - If there is no such field, ErrorMessage will contain the key value: "ErrorText5". This is ASP.NET Core behaviour.
 
 Change culture:
-- You can change the culture and all text changes, with the following 3 lines of code:
+- You can change the culture, so all text changes, with the following 3 lines of code:
 - `var cultureInfo = new CultureInfo("en-US");`
 - `CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
 - `CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;`
