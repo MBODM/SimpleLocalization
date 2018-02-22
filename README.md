@@ -5,15 +5,12 @@ In ASP.NET Core 2.x you can use localization in a simple way, mostly known as "S
 
 Usage:
 
-1.
-Add NuGet package or src to your ASP.NET Core 2.x project.
+1) Add NuGet package or src to your ASP.NET Core 2.x project.
 
-2.
-Add a folder named "Resources" to your project.
+2) Add a folder named "Resources" to your project.
 PS: There is also an overloaded method in the middleware, allowing you to specify the name and path of the folder.
 
-3)
-Add an empty class to that folder. We name the class "SharedResources" here. But that is up to you.
+3) Add an empty class to that folder. We name the class "SharedResources" here. But that is up to you.
 Add also ".resx" files to that folder. The files must have the same name as the class we added.
 PS: As i already said above, this is a requirement of the ASP.NET Core localization concept.
 
