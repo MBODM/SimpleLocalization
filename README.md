@@ -11,15 +11,14 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 
 Usage:
 
-- Add NuGet package or src to your ASP.NET Core 2.x project.
+1. Add NuGet package or src to your ASP.NET Core 2.x project.
 
-- Add a folder named "Resources" to your project.
-PS: There is also an overloaded method in the middleware, allowing you to specify the name and path of the folder.
+2. Add a folder named "Resources" to your project. There is also an overloaded method in the middleware, allowing you to specify the name and path of the folder.
 
-3) Add an empty class to that folder. We name the class "SharedResources" here. But that is up to you.
-Add also ".resx" files to that folder. The files must have the same name as the class we added.
-PS: As i already said above, this is a requirement of the ASP.NET Core localization concept.
-As example, we add 2 files named "SharedResources.en.resx" and "SharedResources.de.resx".
+3. Add an empty class to that folder. We name the class "SharedResources" here. But that is up to you. Add also ".resx" files to that folder. The files must have the same name as the class we added. As i already said above, this is a requirement of the ASP.NET Core localization concept.
+
+3.1
+example, we add 2 files named "SharedResources.en.resx" and "SharedResources.de.resx".
 In that case, we support localization for english and german languages.
 
 4) Add the middleware in the "Startup.cs" of your project:
