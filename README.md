@@ -16,13 +16,13 @@ Usage:
 2. Add a folder named "Resources" to your project. Hint: This is the default, but the middleware has also a method overload, allowing you to specify name and path of the folder.
 
 3. Add an empty class to that folder. Also add ".resx" files to that folder. They must have the same name as the class. This is a requirement of ASP.NET Core localization. The name is up to you. As example, we use "SharedResources" as name here, for the class and 2 resource files, to support english and german:
-    - SharedResources.cs
-    - SharedResources.en.resx
-    - SharedResources.de.resx
+    - `SharedResources.cs`
+    - `SharedResources.en.resx`
+    - `SharedResources.de.resx`
 
 4) Add the middleware in the "Startup.cs" of your project:
-   - services.AddSimpleLocalization<SharedResources>();
-   - services.AddMvc().AddSimpleLocalizationForDataAnnotations<SharedResources>();
+   - `services.AddSimpleLocalization<SharedResources>();`
+   - `services.AddMvc().AddSimpleLocalizationForDataAnnotations<SharedResources>();`
 
 5) You are now able to use localization in:
    - C# classes (controllers, models, etc.)
@@ -30,27 +30,27 @@ Usage:
    - DataAnotations (i.e. `[Required(ErrorMessage = "MyErrorText"]`)
 
 Used in Controller:
-- Inject "ILocalizer<SharedRessources>" into your controller. We name the variable "localizer".
-- With "localizer["MyMessageText"]" or "localizer.GetText("MyMessageText")" you can use it.
+- Inject `ILocalizer<SharedRessources>` into your controller. We name the variable `localizer`.
+- With `localizer["MyMessageText"]` or `localizer.GetText("MyMessageText")` you can use it.
 - The string "MyMessageText" is the name of a field you want to have in your ".resx" files.
 - If there is no such field, the key value returns: "MyMessageText". This is ASP.NET Core behaviour.
 
 Used in View:
-- Add `@@using MBODM.AspNetCore.SimpleLocalization` to your view.
-- Add `@@inject ILocalizer Localizer` to your view.
-- You can use it per `<h1>@@Localizer["MyMessageText"]</h1>`.
+- Add `@using MBODM.AspNetCore.SimpleLocalization` to your view.
+- Add `@inject ILocalizer Localizer` to your view.
+- You can use it per `<h1>@Localizer["MyMessageText"]</h1>`.
 
 Used in DataAnotations:
 - You do not have to do anything.
-- Just use i.e. "[Required(ErrorMessage = "MyErrorText"]".
+- Just use i.e. `[Required(ErrorMessage = "MyErrorText"]`.
 - The string "MyErrorText" is the name of a field you want to have in your ".resx" files.
 - ErrorMessage will now contain the value of that field.
 - If there is no such field, ErrorMessage will contain the key value: "MyErrorText". This is ASP.NET Core behaviour.
 
 Change culture:
 - You can change the culture and all text changes, with the following 3 lines of code:
-- var cultureInfo = new CultureInfo("en-US");
-- CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
-- CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+- `var cultureInfo = new CultureInfo("en-US");`
+- `CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
+- `CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;`
 
 That´s it. Have fun!
