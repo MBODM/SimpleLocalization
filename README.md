@@ -54,4 +54,5 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 - `CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;`
 
 
+
 That´s it. Have fun!
