@@ -17,7 +17,7 @@ Usage:
 
 3. Add an empty class to that folder. We name the class "SharedResources" here. But that is up to you. Add also ".resx" files to that folder. The files must have the same name as the class we added. As i already said above, this is a requirement of the ASP.NET Core localization concept.
 
-3.1
+3.1.
 example, we add 2 files named "SharedResources.en.resx" and "SharedResources.de.resx".
 In that case, we support localization for english and german languages.
 
