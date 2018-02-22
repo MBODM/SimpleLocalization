@@ -1,7 +1,7 @@
 # SimpleLocalization
-A simple middleware for ASP.NET Core 2.0 that abstracts localization and make things easier.
+A simple middleware for ASP.NET Core 2.x that abstracts localization and make things easier.
 
-In ASP.NET Core 2.0 you can use localization in a simple way, mostly known as "Shared Resources". This middleware use this approach and abstracts the ASP.NET Core stuff away from the application, to keep things simple in the future, if they change the concepts of ASP.NET Core.
+In ASP.NET Core 2.x you can use localization in a simple way, mostly known as "Shared Resources". This middleware use this approach and abstracts the ASP.NET Core stuff away from the application, to keep things simple in the future, if they change the concepts of ASP.NET Core.
 
 Usage:
 
