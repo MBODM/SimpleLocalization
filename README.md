@@ -29,9 +29,12 @@ Usage:
    - Views (.cshtml files)
    - DataAnotations (i.e. "[Required(ErrorMessage = "MyErrorMessage"]")
 
-6) Inject "ILocalizer<SharedRessources> localizer" into your controller.
-  
-7) With "localizer["MessageText"]" or "localizer.GetText("MessageText")" you can use it. The string "MessageText" is the name of a field in your ".resx" files.
+Controller:
+
+- Inject "ILocalizer<SharedRessources>" into your controller. We name the variable "localizer".
+- With "localizer["MessageText"]" or "localizer.GetText("MessageText")" you can use it.
+- The string "MessageText" is the name of a field you want to have in your ".resx" files.
+- If there is no such field, the key value returns: "MessageText". That is ASP.NET Core behaviour.
 
 8) You can change the culture and all text changes:
 
