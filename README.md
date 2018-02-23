@@ -49,10 +49,11 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 - If there is no such field, `ErrorMessage` will contain the key himself (*"ErrorText5"*). This is ASP.NET Core behaviour.
 
 ### Change culture:
-- You can change the culture, so all text changes, with the following 3 lines of code:
+- You can change the culture, with the following 3 lines of code:
 - `var cultureInfo = new CultureInfo("en-US");`
 - `CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
 - `CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;`
+- Now all your text changes, using the *".en.resx"* file values.
 
 ### Additional information:
 The behaviour of "returning the key himself" is a concept of ASP.NET Core localization, allowing you to directly use default messages as keys, while developing. Later you can translate them into different languages. We used keys like *"MessageText1"* here, for better documentation. But consider a key like *"Thank you for using our products."*. This text will be served as default, and can be used later, as key in your *".resx"* files, for other languages.
