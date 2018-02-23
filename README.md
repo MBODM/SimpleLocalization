@@ -27,7 +27,7 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 5) You are now able to use localization in:
    - C# classes (controllers, models, etc.)
    - Views (.cshtml files)
-   - DataAnotations (i.e. `[Required(ErrorMessage = "ErrorText5"]`)
+   - DataAnnotations (i.e. `[Required(ErrorMessage = "ErrorText5"]`)
 
 ### Used in Controller:
 - Inject `ILocalizer<SharedRessources>` into your controller. We name the variable `localizer`.
