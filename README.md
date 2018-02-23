@@ -58,7 +58,7 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 ### Additional information:
 The behaviour of "returning the key himself" is a concept of ASP.NET Core localization, allowing you to directly use default messages, while developing. Later you can translate that default messages into different languages. We used keys like *"MessageText1"* here, for better documentation. But consider a key like *"Thank you for using our products."*. This text will be served as default. But later, when you decided you want to add support for other languages, that text will be used as key in your *".resx"* files.
 
-For more information about this, and to get a better understanding of the localization process in ASP.NET Core, have a look at the official documentation at:
+For more information about this, or to get a better understanding of the localization process in ASP.NET Core, have a look at the official documentation at:
 
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization
 
