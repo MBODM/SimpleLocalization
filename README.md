@@ -31,7 +31,7 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 
 ### Used in Controller:
 - Inject `ILocalizer<SharedRessources>` into your controller. We use `localizer` as variable name here.
-- **Hint:** You don't have to register `ILocalizer<>` by yourself. The middleware already does this for you.
+- **Hint:** You don't have to register `ILocalizer<>` by yourself. It's already done by the middleware.
 - With `localizer["MessageText1"]` or `localizer.GetText("MessageText1")` you can use it.
 - The string *"MessageText1"* is the name of a field you want to have in your *".resx"* files.
 - If there is no such field, the key value returns (*"MessageText1"*). This is ASP.NET Core behaviour.
