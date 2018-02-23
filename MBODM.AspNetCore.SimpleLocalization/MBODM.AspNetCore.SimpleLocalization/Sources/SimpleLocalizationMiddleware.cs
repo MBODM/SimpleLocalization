@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MBODM.AspNetCore.SimpleLocalization
 {
@@ -8,6 +9,16 @@ namespace MBODM.AspNetCore.SimpleLocalization
             this IServiceCollection serviceCollection, string resourcesPath)
             where TSharedResourceClass : class
         {
+            if (serviceCollection == null)
+            {
+                throw new ArgumentNullException(nameof(serviceCollection));
+            }
+
+            if (string.IsNullOrEmpty(resourcesPath))
+            {
+                throw new ArgumentException("Argument is null or empty.", nameof(resourcesPath));
+            }
+
             return serviceCollection.
                 AddScoped<ILocalizer, Localizer<TSharedResourceClass>>().
                 AddLocalization(options => options.ResourcesPath = resourcesPath);
@@ -24,6 +35,11 @@ namespace MBODM.AspNetCore.SimpleLocalization
             this IMvcBuilder mvcBuilder)
             where TSharedResourceClass : class
         {
+            if (mvcBuilder == null)
+            {
+                throw new ArgumentNullException(nameof(mvcBuilder));
+            }
+
             return mvcBuilder.AddDataAnnotationsLocalization(options =>
             {
                 options.DataAnnotationLocalizerProvider = (type, factory) =>

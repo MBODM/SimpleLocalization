@@ -3,11 +3,11 @@ using Microsoft.Extensions.Localization;
 
 namespace MBODM.AspNetCore.SimpleLocalization
 {
-    public sealed class Localizer<T> : ILocalizer
+    public sealed class Localizer<TSharedResourceClass> : ILocalizer
     {
-        private readonly IStringLocalizer<T> stringLocalizer;
+        private readonly IStringLocalizer<TSharedResourceClass> stringLocalizer;
 
-        public Localizer(IStringLocalizer<T> stringLocalizer)
+        public Localizer(IStringLocalizer<TSharedResourceClass> stringLocalizer)
         {
             this.stringLocalizer = stringLocalizer ?? throw new ArgumentNullException(nameof(stringLocalizer));
         }
@@ -19,6 +19,11 @@ namespace MBODM.AspNetCore.SimpleLocalization
 
         public string GetText(string key)
         {
+            if (string.IsNullOrEmpty(key))
+            {
+                throw new ArgumentException("Argument is null or empty.", nameof(key));
+            }
+
             return stringLocalizer[key];
         }
     }
