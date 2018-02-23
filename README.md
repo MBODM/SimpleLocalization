@@ -50,8 +50,8 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 
 ### Change culture:
 - You can change the culture with the following 3 lines of code:
-- `var cultureInfo = new CultureInfo("en-US");`
-- `CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
+- `var cultureInfo = new CultureInfo("en-US");
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
 - `CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;`
 - Now all your text changes, using the values form *".en.resx"* file.
 
