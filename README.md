@@ -50,10 +50,10 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 
 ### Change culture:
 - You can change the culture with the following 3 lines of code:
-- `var cultureInfo = new CultureInfo("en-US");
-CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
+- `var cultureInfo = new CultureInfo("en-US");`
+- `CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
 - `CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;`
-- Now all your text changes, using the values form *".en.resx"* file.
+- Now all of your text changes, using the values from *".en.resx"* file.
 
 ### Additional information:
 The behaviour of "returning the key himself" is a concept of ASP.NET Core localization, allowing you to directly use default messages as keys, while developing. Later you can translate them into different languages. We used keys like *"MessageText1"* here, for better documentation. But consider a key like *"Thank you for using our products."*. This text will be served as default, and can be used later, as key in your *".resx"* files, for other languages.
