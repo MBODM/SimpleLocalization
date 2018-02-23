@@ -45,7 +45,7 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 - You don't have to do anything.
 - Just use normal DataAnnotations, i.e. `[Required(ErrorMessage = "ErrorText5"]`.
 - The string *"ErrorText5"* is the name of a field you want to have in your *".resx"* files.
-- ErrorMessage will now contain the value of that field.
+- The displayed `ErrorMessage` will now contain the value of that field.
 - If there is no such field, ErrorMessage will contain the key himself (*"ErrorText5"*). This is ASP.NET Core behaviour.
 
 ### Change culture:
