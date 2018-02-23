@@ -49,7 +49,7 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 - If there is no such field, `ErrorMessage` will contain the key himself (*"ErrorText5"*). This is ASP.NET Core behaviour.
 
 ### Change culture:
-- You can change the culture, with the following 3 lines of code:
+- You can change the culture with the following 3 lines of code:
 - `var cultureInfo = new CultureInfo("en-US");`
 - `CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
 - `CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;`
