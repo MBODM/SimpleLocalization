@@ -54,4 +54,9 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 - `CultureInfo.DefaultThreadCurrentCulture = cultureInfo;`
 - `CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;`
 
+### Additional information:
+To get a better understanding of the localization process in ASP.NET Core, have a look at their official documentation at:
+
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization
+
 ###### That´s it. Have fun!
