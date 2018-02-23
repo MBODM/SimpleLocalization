@@ -41,7 +41,7 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 - Add `@inject ILocalizer Localizer` to your view.
 - Now you can use it via `<h1>@Localizer["MessageText1"]</h1>`.
 
-### Used in DataAnnotations:
+### Used in DataAnnotation:
 - You do not have to do anything.
 - Just use i.e. `[Required(ErrorMessage = "ErrorText5"]`.
 - The string *"ErrorText5"* is the name of a field you want to have in your *".resx"* files.
