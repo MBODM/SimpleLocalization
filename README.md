@@ -30,7 +30,7 @@ Simple stuff like localization is easy to decouple. And since localization is a 
    - DataAnnotations (i.e. `[Required(ErrorMessage = "ErrorText5"]`)
 
 ### Used in Controller:
-- Inject `ILocalizer<SharedRessources>` into your controller. We name the variable `localizer`.
+- Inject `ILocalizer<SharedRessources>` into your controller. We use `localizer` as variable name here.
 - With `localizer["MessageText1"]` or `localizer.GetText("MessageText1")` you can use it.
 - The string *"MessageText1"* is the name of a field you want to have in your *".resx"* files.
 - If there is no such field, the key value returns (*"MessageText1"*). This is ASP.NET Core behaviour.
