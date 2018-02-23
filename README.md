@@ -55,7 +55,7 @@ Simple stuff like localization is easy to decouple. And since localization is a 
 - `CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;`
 
 ### Additional information:
-To get a better understanding of the localization process in ASP.NET Core, have a look at their official documentation at:
+The behaviour of "returning the key himself" is a concept of ASP.NET Core localization, that allows you to directly use default messages as keys, while developing. Later you can translate them into different languages. We used keys like *"MessageText1"* here, for better documentation. But consider a key like *"Thank you for using our products."*. This text will be served as default, and can be used later, as key in your *".resx"* files, for other languages. For more information about this, and to get a better understanding of the localization process in ASP.NET Core, have a look at the official documentation at:
 
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization
 
